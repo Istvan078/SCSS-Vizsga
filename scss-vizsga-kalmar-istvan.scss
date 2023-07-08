@@ -1,0 +1,70 @@
+$bg-color: #dcb499;
+$body-bg-color: rgb(0,0,0);
+$font-color: #fff;
+$padding-15-font-size-15: 15px;
+$box-shadow: 0px 2px 10px green;
+
+@mixin style($padding, $margin) {
+    padding: $padding ;
+    margin: $margin ;
+}
+
+body{
+    background-color: $body-bg-color;
+}
+
+nav{
+    background-color: $bg-color;
+    backdrop-filter: blur(12px);
+    top: 0;
+    position: sticky;
+    box-shadow: $box-shadow;
+    padding: $padding-15-font-size-15;
+
+    button{
+        color: $font-color;
+        font: {
+            weight: 400;
+        }
+    }
+    button:hover{
+        color: #f3f3f3;
+        text-shadow: 0px 2px 2px green;
+        font-size: $padding-15-font-size-15;
+    }
+}
+
+.container{
+    background-color: $bg-color;
+    width: 1320px;
+    @include style(15px,20px 0);
+
+    h2{
+       color:$font-color;
+       padding: $padding-15-font-size-15;
+    }
+}
+
+.text-box{
+    padding: $padding-15-font-size-15;
+    box-shadow: $box-shadow;
+    color: $font-color;
+    font-size: $padding-15-font-size-15;
+    background-color: #c0997f;
+}
+
+form{
+    @include style(15px,20px 0);
+    box-shadow: $box-shadow;
+    color: $font-color;
+    font-size: $padding-15-font-size-15;
+    background-color: #c0997f;
+}
+
+footer{
+    @include style(15px,20px 0);
+    box-shadow: $box-shadow;
+    color: $font-color;
+    font-size: $padding-15-font-size-15;
+    background-color: $bg-color;
+}
